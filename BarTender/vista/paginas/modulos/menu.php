@@ -18,10 +18,12 @@
                     
                 <?php endif;?>
             </ul>
-            <?php if ($_GET['pagina'] == "administracion"):?> 
-                <a href="salir" class="text-dark">Cerrar Sesion</a>
-            <?php else:?> 
+            <?php if (isset($_GET['pagina'])): ?>
+                <?php if ($_GET['pagina'] == "administracion"):?> 
+                    <a href="salir" class="text-dark">Cerrar Sesion</a>
+                <?php else:?> 
                 <a href="login" class="btn bnt-primary"><i class="fas fa-user-cog"></i></a> 
+                <?php endif;?>
             <?php endif;?>
             
         </div>
